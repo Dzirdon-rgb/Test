@@ -1,0 +1,221 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+label {
+    color: white;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    max-width: 1248px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #08a0ff;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+}
+
+.search-help {
+    display: none;
+    justify-content: flex-end;
+    position: relative;
+    top: 150%;
+    right: 12.9%;
+}
+
+
+
+
+
+.nav-left>.nav__item{
+    padding: 15px;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-right>.nav__search{
+    margin-right: 20px;
+}
+
+.enter {
+    border: #00c4ff 3px solid;
+    border-radius: 5px;
+    background-color: #00c4ff;
+    padding: 5px 10px;
+}
+
+.form__item-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #00c4ff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.modal__auth, .modal__reg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    display: none;
+    z-index: 11;
+}
+
+
+
+.form-auth,.form-registration {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.form-auth__item>label {
+    padding-right: 10px;
+}
+
+.form-reg {
+    color: white;
+    cursor: default;
+}
+
+.form-auth__in {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #00c4ff;
+}
+
+
+.cross {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.cross__right,.cross__left {
+    background-color: white;
+    content: none;
+    display: block;
+
+}
+
+.cross__left{
+    width: 10px;
+    height: 2px;
+    transform: translate(-4px, 6px) rotate(45deg);
+}
+
+.cross__right {
+    width: 2px;
+    height: 10px;
+    transform:  rotate(45deg);
+
+}
+
+
+.main {
+    position: relative;
+}
+
+.articles {
+    padding: 10px 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.article__header {
+    width: 100%;
+    height: 200px;
+    background-color: green;
+}
+
+.article__body-title {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.article__body-desc {
+    padding: 5px 10px 0;
+}
+
+.scroll {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 5px 5px #08a0ff;
+}
+
+
+@media (max-width: 768px) {
+    .article {
+        width: 40%;
+    }
+
+    .modal__auth,.modal__reg {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .article {
+        min-width: 50%;
+    }
+
+    .article__header-img {
+        height: 50px;
+    }
+
+    .nav__item {
+        font-size: 15px;
+    }
+}
